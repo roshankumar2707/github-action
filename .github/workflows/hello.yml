@@ -2,7 +2,11 @@ name: Hello-Workflow #This is workflow name that will be displayed in the Action
 
 #runs on a trigger
 on: 
-  workflow_dispatch: 
+  push:
+    branches: [main]
+
+    paths:
+    - '**.html'
 
 
 jobs: #This is jobs inside a workflow where we can write multiple Jobs
