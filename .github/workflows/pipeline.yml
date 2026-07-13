@@ -1,0 +1,27 @@
+name: pipelines-docker
+
+on:
+ workflow_dispatch:
+
+jobs:
+
+ CodeCopy:
+   runs-on: ubuntu-latest
+   steps:
+    - name: CodeCheck
+      run: echo "Code_Copied"
+
+ Securitycheck:
+    needs: CodeCopy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Security check
+        run: echo "Security Check Done"
+
+ Deploy:
+    needs: Securitycheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Deploy
+        run: echo "Deploy Done"
+    
