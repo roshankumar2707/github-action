@@ -20,6 +20,7 @@ jobs: #This is jobs inside a workflow where we can write multiple Jobs
   
 #This is GitHub Runner, Each jobs runs on a runner
     runs-on: ubuntu-latest
+    needs: greet
     
     steps: #Execution of the task with name and action(run)
       - name: verison of python, docker
