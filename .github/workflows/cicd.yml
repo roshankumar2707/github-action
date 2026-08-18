@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: checkout code
         run: echo "Code clone from github"
+        
+      - name: checkout code-2
+        run: echo "Code clone from github"
 
   builds:
     needs: code
